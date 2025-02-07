@@ -66,7 +66,7 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.AB, function () {
     basic.showString("" + (message))
-    radio.sendMessage(message)
+    radio.sendString("" + (message))
 })
 radio.onReceivedString(function (receivedString) {
     basic.showString(receivedString)
@@ -158,9 +158,9 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     basic.showString("Bonjour, vous etes actuellement sur MicroMessage. Si vous voulez skip l'introduction de MicroMessage appuyez sur B. Sinon appuyer sur A+B.")
     basic.showString("MicroMessage est un programme développer pas Simon Guyot pour deux MicroBit.")
 })
-let message = 0
+let message: string[] = []
 let nbLettreActu = 0
 nbLettreActu = 0
-message = 0
+message = []
 radio.setGroup(109)
 radio.setFrequencyBand(11)
